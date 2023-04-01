@@ -4,7 +4,7 @@ from utils.base_session import demowebshop
 
 
 @pytest.fixture(scope='session')
-def login():
+def register():
     browser.config.window_height = 1080
     browser.config.window_width = 1920
     browser.config.base_url = "https://demowebshop.tricentis.com/"
