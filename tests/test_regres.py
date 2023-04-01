@@ -29,11 +29,11 @@ def test_login_successful():
     assert S(schema.schema.login_successfully) == login_successfully.json()
 
 
-def test_login_unsuccessful():
-    login_unsuccessful = regres.post("/login", {"email": "wrong@email"})
-    assert login_unsuccessful.status_code == 400
-    assert len(login_unsuccessful.content) != 0
-    assert S(schema.schema.login_unsuccessfully) == login_unsuccessful.json()
+def test_login_unsuccessfully():
+    login_unsuccessfully = regres.post("/login", {"email": "wrong@email"})
+    assert login_unsuccessfully.status_code == 400
+    assert len(login_unsuccessfully.content) != 0
+    assert S(schema.schema.login_unsuccessfully) == login_unsuccessfully.json()
 
 
 def test_delete_user():

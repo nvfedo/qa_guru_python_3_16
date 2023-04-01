@@ -18,7 +18,7 @@ def test_delete_cart(register):
     register.element('.qty-input').clear().send_keys(0).press_enter()
 
 
-def test_computers(register):
+def test_printers(register):
     register.open('')
     register.element('.search-box-text').type('print').press_enter()
     register.element('.result').should(have.text('No products were found that matched your criteria.'))
